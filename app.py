@@ -12,7 +12,7 @@ def read_shapefile(file_path):
     return gdf
 
 def calculate_percentage_risk():
-    file_path = "f:/earth_insight/risk_peatlands.gpkg"
+    file_path = "/data/risk_peatlands.gpkg"
     gdf = read_shapefile(file_path)
     
     gdf['area_2'] = pd.to_numeric(gdf['area_2'], errors='coerce')
@@ -62,7 +62,7 @@ def main():
              "to Oil & Gas infrastructure or basins within 10 miles. The level of risk increases as the number "
              "of O&G infrastructure near that peatland increases.")
     # peatlands risk file
-    peatlands_file = "f:/earth_insight/risk_peatlands.gpkg"
+    peatlands_file = "/data/risk_peatlands.gpkg"
 
     if peatlands_file is not None:
         peatlands_gdf = read_shapefile(peatlands_file)
